@@ -1,3 +1,3 @@
-pip install twines
+pip install twine
 twine upload dist/*
 pause
