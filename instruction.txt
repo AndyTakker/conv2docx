@@ -1,0 +1,10 @@
+REM Установка инструментов (однократно)
+pip install setuptools wheel twine
+
+REM Сборка дистрибутива
+python -m build
+
+REM Публикация дистрибутива
+twine upload dist/*
+ 
+REM Логин и пароль в файле c:\Users\koles\.pypirc
