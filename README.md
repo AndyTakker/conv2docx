@@ -1,6 +1,6 @@
 # conv2docx
 
-A simple CLI tool to convert JSON files into Microsoft Word (.docx) documents.
+A simple CLI tool to convert JSON/YAML files into Microsoft Word (.docx) documents.
 
 ## Overview
 
@@ -8,10 +8,11 @@ This script wraps JSON content in markdown delimiters (```\json```) and uses
  [Pandoc](https://pandoc.org/ ) via the `pypandoc` module to convert it 
  to a `.docx` document — useful when you need to turn structured data into printable
  or editable documents.
+ YAML is also supported. It convert to JSON and then processed as JSON/
 
 ## Features
 
-- Converts `.json` files to `.docx`
+- Converts `.json/yaml` files to `.docx`
 - Supports single file mode and batch processing
 - Automatically creates and cleans up temporary files
 - Can be used as a command-line utility
@@ -29,6 +30,8 @@ To convert all .json files in the current directory:
 ```bash
 conv2docx
 ```
+
+parameter `--keep-temp` keeps temporary files
 
 ## Installation
 
