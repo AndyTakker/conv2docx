@@ -1,3 +1,4 @@
 conv2docx.egg-info/
 dist/
 src/conv2docx/__pycache__/
+tests/__pycache__/

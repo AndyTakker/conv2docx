@@ -4,6 +4,7 @@ import pypandoc
 from importlib.metadata import version
 import yaml
 import json
+from pathlib import Path
 
 def convert_yaml_to_json(input_file):
     """
@@ -107,6 +108,10 @@ def main():
     # Если нет аргументов — берем все JSON/YAML файлы в текущей папке
     if not input_files:
         input_files = [f for f in os.listdir() if f.lower().endswith(('.json', '.yaml', '.yml'))]
+    else:   # Аргументы есть, проверим, что файл существует
+        file_path = Path(input_files[0])
+        if not file_path.exists():
+            sys.exit(1)
 
     if not input_files:
         print("Нет подходящих файлов для обработки (.json, .yaml, .yml).")
