@@ -1,2 +1,3 @@
-conv2docx.egg-info/*
-dist/*
+conv2docx.egg-info/
+dist/
+src/conv2docx/__pycache__/

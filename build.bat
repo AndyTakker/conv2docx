@@ -1,7 +1,8 @@
 @echo off
 chcp 1251 >nul
-REM Сборка дистрибутива
+REM Очистка старых версий
 rmdir /s /q dist
-rmdir /s /q conv2docx.egg-info
-python -m build 
+rmdir /s /q .\src\conv2docx.egg-info
+REM Сборка дистрибутива
+python -m build
 pause
